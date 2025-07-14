@@ -1,0 +1,105 @@
+html {
+    font-size: 25px;
+}
+
+@media (max-width: 600px) {
+  html {
+    font-size: 30px;
+  }
+}
+
+h1 {
+    text-align: center;
+    font-size: 2rem;
+}
+
+h3 {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 1.25rem;
+    opacity: 0;
+    animation: fadeIn 1s ease-out forwards;
+    animation-delay: 3.2s;
+}
+
+p {
+    text-align: center;
+    font-size: 1rem;
+    opacity: 0;
+    animation: fadeIn 1s ease-out forwards;
+    animation-delay: 3.2s;
+}
+
+a { 
+    color: inherit; 
+    text-decoration: none;
+} 
+
+a:hover {
+    color:#ff0000; 
+    text-decoration:none; 
+    cursor:pointer;  
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+* {
+  font-family: Menlo, Monaco, 'Courier New', monospace;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    text-align: center;
+    overflow: hidden;
+    font-family: Menlo, Monaco, 'Courier New', monospace;
+    text-align: center;
+    align-items: center;   
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    background-color: #faf0e6;
+}
+
+ul {
+    margin: 1em 0;
+}
+
+li {
+    margin: 1em 0;
+}
+
+.typing {
+    max-width: 26ch;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 2px solid;
+    animation: typing 3s steps(30), blink 0.7s step-end infinite;
+}
+
+
+@keyframes typing {
+  from {
+    max-width: 0;
+  }
+  to {
+    max-width: 26ch;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
